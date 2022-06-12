@@ -1,0 +1,18 @@
+
+version: 2
+
+models:
+  - name: stg_users
+    description: "users contact information"
+  - name: stg_products
+    description: "greenery products"
+  - name: stg_promos
+    description: "promotion at greenery"
+  - name: stg_orders
+    description: "greenery orders, delivery info"
+  - name: stg_order_items
+    description: "ordered items inside an order"
+  - name: stg_events
+    description: "users site sessions and events"
+  - name: stg_addresses
+    description: "delivery information of greenery users"
