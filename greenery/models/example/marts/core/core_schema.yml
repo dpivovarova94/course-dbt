@@ -4,6 +4,11 @@ models:
   
   - name: dim_products
     description: dimensional table about products
+    tests:
+    - dbt_utils.expression_is_true:
+          expression: "price > 0"
+    - dbt_utils.expression_is_true:
+          expression: "inventory > 0"
     columns:
       - name: product_id
         tests:
@@ -12,10 +17,8 @@ models:
       - name: price
         tests:
         - not_null
-        - positive_values
       - name: inventory
-        tests:
-        - positive_values
+
         
   - name: dim_users
     description: dimensional table for users

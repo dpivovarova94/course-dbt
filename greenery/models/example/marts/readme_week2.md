@@ -35,5 +35,8 @@ from user_with_2_and_more_orders
 
 
 # Explain the marts models you added. Why did you organize the models in the way you did?
-as was mentioned in the project description, i added dim_products, dim_users and fct_orders to the core folder. Those tables are further used in intermediate tables under marketing and product projects. Lastly, fact tables are build in marketinf and product projects that combine the intermediate tables with other tables for enriching the data and getting it aggregated on the needed level. 
+as was mentioned in the project description, I added dim_products, dim_users and fct_orders to the core folder. Those tables are further used in intermediate tables under marketing and product projects. Lastly, fact tables are build in marketinf and product projects that combine the intermediate tables with other tables for enriching the data and getting it aggregated on the needed level. 
 
+# Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through
+
+as i understand those column level tests implemented will fail with the dbt build command if something doesn't pass the tests. So, I would connect it to Slack, so the Data team is notified whenever those tests are failing.
