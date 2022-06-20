@@ -4,6 +4,19 @@ models:
   
   - name: int_session_events_basic_agg
     description: intermediate table that take event table
+    columns:
+      - name: event_id
+        tests:
+        - not_null
+        - unique
         
   - name: fct_user_session
     description: table that aggregates information user and session level
+    columns:
+      - name: session_id
+        tests:
+        - not_null
+        - unique
+      - name: user_id
+        tests:
+        - not_null

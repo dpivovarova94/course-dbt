@@ -4,15 +4,45 @@ version: 2
 models:
   - name: stg_users
     description: "users contact information"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
   - name: stg_products
     description: "greenery products"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
   - name: stg_promos
     description: "promotion at greenery"
+    columns:
+      - name: promo_id
+        tests:
+          - not_null
+          - unique
   - name: stg_orders
     description: "greenery orders, delivery info"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
   - name: stg_order_items
     description: "ordered items inside an order"
   - name: stg_events
     description: "users site sessions and events"
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
   - name: stg_addresses
     description: "delivery information of greenery users"
+    columns:
+      - name: address_id
+        tests:
+          - not_null
+          - unique

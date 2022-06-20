@@ -4,6 +4,20 @@ models:
   
   - name: int_user_orders
     description: intermediate table that joins fct_orders with dim_users
+    columns:
+      - name: user_id
+        tests:
+        - not_null
+      - name: order_id
+        tests:
+        - not_null
+        - unique
+
         
   - name: fct_user_orders
     description: table that aggregates information on the user level
+    columns:
+      - name: user_id
+        tests:
+        - not_null
+        - unique
