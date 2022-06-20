@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  
+  - name: dim_products
+    description: dimensional table about products
+        
+  - name: dim_users
+    description: dimensional table for users
+
+  - name: fct_orders
+    description: fact table about orders and delivery

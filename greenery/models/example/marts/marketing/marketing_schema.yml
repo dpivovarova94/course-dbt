@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  
+  - name: int_user_orders
+    description: intermediate table that joins fct_orders with dim_users
+        
+  - name: fct_user_orders
+    description: table that aggregates information on the user level

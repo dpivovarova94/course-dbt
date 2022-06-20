@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  
+  - name: int_session_events_basic_agg
+    description: intermediate table that take event table
+        
+  - name: fct_user_session
+    description: table that aggregates information user and session level
