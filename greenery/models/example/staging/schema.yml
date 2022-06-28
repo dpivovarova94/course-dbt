@@ -1,6 +1,7 @@
 
 version: 2
 
+
 models:
   - name: stg_users
     description: "users contact information"
@@ -46,3 +47,6 @@ models:
         tests:
           - not_null
           - unique
+
+on-run-end:
+  - "grant usage on schema {{dbt_darima_p}} to role reporting"

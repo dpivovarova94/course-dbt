@@ -20,3 +20,6 @@ models:
       - name: user_id
         tests:
         - not_null
+  - name: fct_product_session
+    description: table that aggregates information on product and session level
+  

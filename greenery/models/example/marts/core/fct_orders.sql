@@ -29,6 +29,7 @@ SELECT
   , orders.created_at_utc
   , orders.estimated_delivery_at_utc
   , orders.delivered_at_utc
+  ,{{ dbt_utils.datediff("date(orders.created_at_utc)", "date(orders.delivered_at_utc)", 'day') }} as days_to_order_delivery
   , orders.status AS order_status
   , orders.shipping_cost
   , promos.promo_id
